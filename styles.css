@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+.arrow {
+  width: 300px;
+  /* transform: translate(-50%, -50%); */
+}
+
+.arrow path {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  /* transform: rotate(45deg); */
+  margin: -10px;
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -10px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 10px);
+  }
+}
