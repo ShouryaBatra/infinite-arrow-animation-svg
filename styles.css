@@ -13,7 +13,8 @@ body {
   /* transform: translate(-50%, -50%); */
 }
 
-.arrow path {
+.arrow path.left-arrow {
+  visibility: hidden;
   display: block;
   width: 30px;
   height: 30px;
@@ -22,19 +23,49 @@ body {
   /* transform: rotate(45deg); */
   margin: -10px;
   animation: scroll 2s infinite;
+  animation-delay: 0s;
+}
+
+.arrow path.middle-arrow {
+  visibility: hidden;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  /* transform: rotate(45deg); */
+  margin: -10px;
+  animation: scroll 2s infinite;
+  animation-delay: 0.6666666666666666666s;
+}
+
+.arrow path.right-arrow {
+  visibility: hidden;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  /* transform: rotate(45deg); */
+  margin: -10px;
+  animation: scroll 2s infinite;
+  animation-delay: 1.333333333333333333333333333333s;
 }
 
 @keyframes scroll {
   0% {
+    visibility: visible;
     opacity: 0;
     transform: translate(0px, -10px);
   }
 
   50% {
+    visibility: visible;
     opacity: 1;
   }
 
   100% {
+    visibility: visible;
     opacity: 0;
     transform: translate(0, 10px);
   }
